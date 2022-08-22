@@ -14,14 +14,14 @@
 
 'use strict';
 // initialize the environment variables with the dotenv package
-require('dotenv').config()
-const cors = require('cors');
+
+
 // bring in the Express package
 const express = require('express');
 
 // instantiate the Express application
 const app = express();
-app.use(cors());
+
 
 // set a port number for the server to listen on
 const port = 3001;
@@ -29,15 +29,6 @@ const port = 3001;
 // Routes
 app.get('/', (req, res) => {
     res.send('Hello from the root')
-})
-
-app.get('/starwars', (req, res) => {
-    res.send({
-        character: 'Luke Skywalker',
-        abilities: ['combat', 'White Magik', 'skating'],
-        curse: 'Damned Father',
-        weakness: "Princess Leia"
-    })
 })
 
 
