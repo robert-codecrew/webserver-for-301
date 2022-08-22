@@ -31,6 +31,15 @@ app.get('/', (req, res) => {
     res.send('Hello from the root')
 })
 
+app.get('/starwars', (req, res) => {
+    res.send({
+        character: 'Luke Skywalker',
+        abilities: ['combat', 'White Magik', 'skating'],
+        curse: 'Damned Father',
+        weakness: "Princess Leia"
+    })
+})
+
 
 // turn the server on to listen on specified port
 app.listen(port, () => {
