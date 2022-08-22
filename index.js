@@ -14,7 +14,7 @@
 
 'use strict';
 // initialize the environment variables with the dotenv package
-
+require('dotenv').config();
 
 // bring in the Express package
 const express = require('express');
@@ -24,7 +24,7 @@ const app = express();
 
 
 // set a port number for the server to listen on
-const port = 3001;
+const port = process.env.PORT || 3002;
 
 // Routes
 app.get('/', (req, res) => {
